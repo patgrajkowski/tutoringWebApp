@@ -32,7 +32,7 @@ $textlogocolor: #9399a3;
     transition: all 0.5s ease-in-out;
 }
 @mixin shadow{
-    box-shadow: 0px 0px 2px 1px rgba(122,122,122,0.2);
+    box-shadow: 0px 0px 2px 1px rgba(90,90,90,0.5);
 }
 /********************
    STYLING SECTION
@@ -164,7 +164,7 @@ main{
         }
     }
     .category-section{
-        height: 600px;
+        height: 400px;
         background-color: $lightcolor;
         display: flex;
         justify-content: center;
@@ -207,6 +207,77 @@ main{
                     font-size: 0.8rem;
                     &:hover{
                         opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+    .new-section{
+        background-color: $lightcolor;
+        width: 100%;
+        height: 600px;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            color: white;
+            font-size: 3rem;
+        }
+        .container{
+            width: 1280px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            .card{
+                @include shadow;
+                @include button;
+                width: 32%;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                margin: 6px;
+                background-color: white;
+                border-radius: 0.55rem;
+                color: black;
+                &:hover{
+                    box-shadow: 0px 0px 3px 2px rgba(100,100,100,1);
+                }
+                .avatar{
+                    width: 4rem;
+                }
+                .card-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 60%;
+                    justify-content: space-between;
+                    h2{
+                        color: $darkcolor;
+                        font-size: 1.15rem;
+                    }
+                    span{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+    .new-ad{
+        background-color: white;
+        h1{
+            color: $darkcolor
+        }
+        .container{
+            .card{
+                background-color: $lightcolor;
+                color: white;
+                .card-container{
+                    h2{
+                        color: white;
                     }
                 }
             }
